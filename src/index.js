@@ -28,12 +28,16 @@ if (isNode = typeof process < 'u' && typeof process.stdout < 'u') {
 	hrtime = (now = performance.now()) => () => (performance.now() - now).toFixed(2) + 'ms';
 }
 
+if (typeof Switch < 'u') {
+	write = Switch.print.bind(Switch);
+}
+
 globalThis.UVU_QUEUE = globalThis.UVU_QUEUE || [];
 isCLI = isCLI || !!globalThis.UVU_DEFER;
 isCLI || UVU_QUEUE.push([null]);
 
 const QUOTE = kleur.dim('"'), GUTTER = '\n        ';
-const FAIL = kleur.red('✘ '), PASS = kleur.gray('• ');
+const FAIL = kleur.red('X '), PASS = kleur.gray('- ');
 const IGNORE = /^\s*at.*(?:\(|\s)(?:node|(internal\/[\w/]*))/;
 const FAILURE = kleur.bold().bgRed(' FAIL ');
 const FILE = kleur.bold().underline().white;
