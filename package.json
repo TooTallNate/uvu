@@ -3,37 +3,33 @@
   "version": "0.5.6",
   "repository": "lukeed/uvu",
   "description": "uvu is an extremely fast and lightweight test runner for Node.js and the browser",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "main": "dist/index.js",
   "types": "index.d.ts",
   "license": "MIT",
+  "type": "module",
   "bin": {
     "uvu": "bin.js"
   },
   "exports": {
     ".": {
-      "types": "./index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
     },
     "./assert": {
-      "types": "./assert/index.d.ts",
-      "require": "./assert/index.js",
-      "import": "./assert/index.mjs"
+      "types": "./src/assert.d.ts",
+      "import": "./src/assert.js"
     },
     "./diff": {
-      "types": "./diff/index.d.ts",
-      "require": "./diff/index.js",
-      "import": "./diff/index.mjs"
+      "types": "./src/diff.d.ts",
+      "import": "./src/diff.js"
     },
     "./parse": {
       "types": "./parse/index.d.ts",
-      "require": "./parse/index.js",
       "import": "./parse/index.mjs"
     },
     "./run": {
       "types": "./run/index.d.ts",
-      "require": "./run/index.js",
       "import": "./run/index.mjs"
     }
   },
