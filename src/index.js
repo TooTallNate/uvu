@@ -29,7 +29,7 @@ if (isNode = typeof process < 'u' && typeof process.stdout < 'u') {
 }
 
 if (typeof Switch < 'u') {
-	write = Switch.print.bind(Switch);
+	write = console.print;
 }
 
 globalThis.UVU_QUEUE = globalThis.UVU_QUEUE || [];
