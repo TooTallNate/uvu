@@ -40,7 +40,8 @@
     "parse",
     "diff",
     "dist",
-    "run"
+    "run",
+    "src"
   ],
   "modes": {
     "diff": "src/diff.js",
